@@ -1,13 +1,27 @@
 <br>
-<b> Canada </b>
-<% @canada.each do | key | %> 
-  <br>
-  <%= key["name"] %>
-<% end %>  
+<div class="row">
+  <div class="column">
+    <b> Canada Universities</b>
+    <% @canada.each do | key | %> 
+      <br>
+      <% if key["domains"].count > 1 %>
+      <b><%= key["name"] %></b>
+      <% else %>
+        <%= key["name"] %>
+      <% end %>
+  <% end %>  
+  </div>
 <br>
 <br>
-<b> USA </b>
-<% @usa.each do | key | %> 
-  <br>
-  <%= key["name"] %>
-<% end %>  
+  <div class="column">
+    <b> USA Universities</b>
+    <% @usa.each do | key | %> 
+      <br>
+      <% if key["domains"].count > 1 %>
+        <b><%= key["name"] %></b>
+      <% else %>
+        <%= key["name"] %>
+      <% end %>
+    <% end %> 
+  </div> 
+</div>
