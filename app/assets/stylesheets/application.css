@@ -13,11 +13,10 @@
  *= require_tree .
  *= require_self
  */
- .row {
+.row {
   display: flex;
 }
- .column {
+.column {
   flex: 50%;
   padding: 10px;
-
 }
