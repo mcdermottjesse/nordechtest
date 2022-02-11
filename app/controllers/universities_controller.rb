@@ -24,10 +24,10 @@ class UniversitiesController < ApplicationController
     @canada = parsed_response_canada
     @usa = parsed_response_usa
 
-    # if !University.exists?
-    #   parsed_response_canada.map do |university|
-    #     University.create(university_name: university["name"])
-    #   end
-    # end
+    if !University.exists?
+      parsed_response_canada.map do |university|
+        University.create(university_name: university["name"])
+      end
+    end
   end
 end

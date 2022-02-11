@@ -1,9 +1,10 @@
 <br>
 <div class="row">
   <div class="column">
-    <b> Canada Universities</b>
+    <b> Canadadian Universities </b>
     <br>
     <% @canada.each do | key | %> 
+      <br>
       <% if key["domains"].count > 1 %>
       <b><%= key["name"] %></b>
       <% else %>
@@ -14,7 +15,7 @@
 <br>
 <br>
   <div class="column">
-    <b> USA Universities</b>
+    <b> USA Universities </b>
     <br>
     <% @usa.each do | key | %> 
       <br>
@@ -22,7 +23,7 @@
         <b><%= key["name"] %></b>
       <% else %>
         <%= key["name"] %>
-      <% end %>
-    <% end %> 
-  </div> 
+    <% end %>
+<% end %> 
+</div> 
 </div>
